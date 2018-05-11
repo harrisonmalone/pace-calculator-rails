@@ -1,27 +1,75 @@
 <div class="text-center">
   <h1>Running Calculator</h1>
   <br>
-  <p>Get your pace from total run time and total distance</p>
+
+  <p>Get your <span style="font-weight: bold;">pace</span> from total run time and total distance</p>
   <form action="/pace_answer" method="get">
-    <input type="number" name="minutes" placeholder="Enter total minutes">
-    <input type="number" name="seconds" placeholder="Enter total seconds">
-    <input type="number" name="distance" placeholder="Enter total distance"">
-    <input type="submit">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-xs-12">
+    <label for="total_minutes">Total minutes</label>
+    <input type="number" name="minutes" id="total_minutes" placeholder="Enter total minutes" required>
+        </div>
+        <div class="col-xs-12">
+    <label for="total_seconds">Total seconds</label>
+    <input type="number" name="seconds" placeholder="Enter total seconds" id="total_seconds" required>
+        </div>
+        <div class="col-xs-12">
+    <label for="distance">Total distance (kms)</label>
+    <input type="number" name="distance" step="any" placeholder="Enter total distance" id="distance" required>
+        </div>
+    <input class="btn btn-primary btn-sm" type="submit">
+      </div>
+    </div>
   </form>
   <br>
-  <p>Get your distance from total run time and average pace per kilometre</p>
-  <form action="/pace_answer" method="get">
-    <input type="number" name="minutes" placeholder="Enter total minutes">
-    <input type="number" name="seconds" placeholder="Enter total seconds">
-    <input type="number" name="distance" placeholder="Enter total distance"">
-    <input type="submit">
+
+  <p>Get your <span style="font-weight: bold;">distance</span> from total run time and average pace</p>
+  <form action="/distance_answer" method="get">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-xs-12">
+    <label for="total_minutes">Total minutes</label>
+    <input type="number" name="minutes" placeholder="Enter total minutes" id="total_minutes" required>
+        </div>
+        <div class="col-xs-12">
+    <label for="total_seconds">Total seconds</label>
+    <input type="number" name="seconds" placeholder="Enter total seconds" id="total_seconds" required>
+        </div>
+        <div class="col-xs-12">
+    <label for="total_pace_minutes">Total pace minutes</label>
+    <input type="number" name="pace_minutes" placeholder="Enter pace minutes" id="total_pace_minutes" required>
+        </div>
+        <div class="col-xs-12">
+    <label for="total_pace_seconds">Total pace seconds</label>
+    <input type="number" name="pace_seconds" placeholder="Enter pace seconds" id="total_pace_seconds" required>
+        </div>
+    <input class="btn btn-primary btn-sm" type="submit" formaction="/distance_answer">
+      </div>
+    </div>
   </form>
   <br>
-  <p>Get your total run time from average pace per kilometre and total distance</p>
-  <form action="/pace_answer" method="get">
-    <input type="number" name="minutes" placeholder="Enter total minutes">
-    <input type="number" name="seconds" placeholder="Enter total seconds">
-    <input type="number" name="distance" placeholder="Enter total distance"">
-    <input type="submit">
+
+  <p>Get your <span style="font-weight: bold;">total time</span> from distance and average pace</p>
+  <form action="/time_answer" method="get">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-xs-12">
+    <label for="total_pace_minutes">Total pace minutes</label>
+    <input type="number" name="pace_minutes" placeholder="Enter pace minutes" id="total_pace_minutes" required>
+        </div>
+        <div class="col-xs-12">
+    <label for="total_pace_seconds">Total pace seconds</label>
+    <input type="number" name="pace_seconds" placeholder="Enter pace seconds" id="total_pace_seconds" required>
+        </div>
+      <div class="col-xs-12">
+    <label for="distance">Total distance (kms)</label>
+    <input type="number" name="distance" step="any" placeholder="Enter total distance" id="distance" required>
+        </div>
+    <input class="btn btn-primary btn-sm" type="submit" formaction="/time_answer">
+      </div>
+    </div>
   </form>
+  <br>
+
 </div>
