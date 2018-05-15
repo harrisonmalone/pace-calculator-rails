@@ -12,7 +12,7 @@ class QuestionsController < ApplicationController
     total_seconds = seconds_conversion(@minutes, @seconds)
     total = total_seconds / distance
     total = total / 60
-    @minutes = total.round
+    @minutes = total.floor
     @seconds = total % 1
     @seconds = @seconds * 60
     @seconds = @seconds.round
@@ -36,7 +36,7 @@ class QuestionsController < ApplicationController
     distance = params[:distance].to_f
     total = total_pace_seconds * distance
     total = total / 60
-    @minutes = total.round
+    @minutes = total.floor
     @seconds = total % 1
     @seconds = @seconds * 60
     @seconds = @seconds.round
