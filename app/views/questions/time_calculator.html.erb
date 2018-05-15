@@ -12,7 +12,7 @@
         </div>
         <div class="col-xs-12">
     <label for="total_seconds">Total seconds</label>
-    <input type="number" name="seconds" placeholder="Enter total seconds" id="total_seconds" required>
+    <input type="number" min="0" max="59" name="seconds" placeholder="Enter total seconds" id="total_seconds" required>
         </div>
         <div class="col-xs-12">
     <label for="distance">Total distance (kms)</label>
@@ -34,7 +34,7 @@
         </div>
         <div class="col-xs-12">
     <label for="total_seconds">Total seconds</label>
-    <input type="number" name="seconds" placeholder="Enter total seconds" id="total_seconds" required>
+    <input type="number" min="0" max="59" name="seconds" placeholder="Enter total seconds" id="total_seconds" required>
         </div>
         <div class="col-xs-12">
     <label for="total_pace_minutes">Total pace minutes</label>
@@ -42,7 +42,7 @@
         </div>
         <div class="col-xs-12">
     <label for="total_pace_seconds">Total pace seconds</label>
-    <input type="number" name="pace_seconds" placeholder="Enter pace seconds" id="total_pace_seconds" required>
+    <input type="number" min="0" max="59" name="pace_seconds" placeholder="Enter pace seconds" id="total_pace_seconds" required>
         </div>
     <input class="btn btn-primary btn-sm" type="submit" formaction="/distance_answer">
       </div>
@@ -60,7 +60,7 @@
         </div>
         <div class="col-xs-12">
     <label for="total_pace_seconds">Total pace seconds</label>
-    <input type="number" name="pace_seconds" placeholder="Enter pace seconds" id="total_pace_seconds" required>
+    <input type="number" min="0" max="59" name="pace_seconds" placeholder="Enter pace seconds" id="total_pace_seconds" required>
         </div>
       <div class="col-xs-12">
     <label for="distance">Total distance (kms)</label>
